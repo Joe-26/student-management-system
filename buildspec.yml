@@ -16,7 +16,6 @@ phases:
   post_build:
     commands:
       - echo "Build completed. Copying files to S3..."
-      - aws s3 sync dist s3://sms-react-frontend --delete
 
 artifacts:
   files:
