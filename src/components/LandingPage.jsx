@@ -19,15 +19,15 @@ export default function LandingPage() {
 
   return (
     <div className='px-10 py-2'>
-        <div className='text-3xl font-extrabold'>Student Management System</div>
+        <div className='text-3xl font-extrabold my-4'>Student Management System</div>
         <table className='border'>
           <thead>
-            <tr className='border bg-amber-400'>
-              <th>ID</th>
-              <th>name</th>
-              <th>address</th>
-              <th>course</th>
-              <th>dob</th>
+            <tr className='border bg-blue-400'>
+              <th className='border'>ID</th>
+              <th className='border'>Full Name</th>
+              <th className='border'>Address</th>
+              <th className='px-3 border'>Course</th>
+              <th className='border'>Dob</th>
             </tr>
           </thead>
           <tbody>
@@ -35,11 +35,11 @@ export default function LandingPage() {
               students.map(
                 student =>
                   <tr key={student.student_id}>
-                    <td>{student.student_id}</td>
-                    <td>{student.name}</td>
-                    <td>{student.address}</td>
-                    <td>{student.course}</td>
-                    <td>{student.dob}</td>
+                    <td className='px-3 border'>{student.student_id}</td>
+                    <td className='px-3 border'>{student.name}</td>
+                    <td className='px-3 border'>{student.address}</td>
+                    <td className='text-center border'>{student.course}</td>
+                    <td className='px-3 border'>{student.dob}</td>
                   </tr>
               )
             }
