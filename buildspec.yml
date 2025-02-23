@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+
+  build:
+    commands:
+      - echo "Building React app..."
+      - npm run build
+
+  post_build:
+    commands:
+      - echo "Build completed. Copying files to S3..."
+      - aws s3 sync dist s3://sms-react-frontend --delete
+
+artifacts:
+  files:
+    - "**/*"
+  discard:path: no
+  base-directory: dist
