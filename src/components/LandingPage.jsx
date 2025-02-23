@@ -22,7 +22,7 @@ export default function LandingPage() {
         <div className='text-3xl font-extrabold my-4'>Student Management System</div>
         <table className='border'>
           <thead>
-            <tr className='border bg-blue-400'>
+            <tr className='border bg-blue-300'>
               <th className='border'>ID</th>
               <th className='border'>Full Name</th>
               <th className='border'>Address</th>
