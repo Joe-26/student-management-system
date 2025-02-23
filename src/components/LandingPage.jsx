@@ -18,11 +18,11 @@ export default function LandingPage() {
   }
 
   return (
-    <div>
+    <div className='px-10 py-2'>
         <div className='text-3xl font-extrabold'>Student Management System</div>
-        <table>
+        <table className='border'>
           <thead>
-            <tr>
+            <tr className='border'>
               <th>ID</th>
               <th>name</th>
               <th>address</th>
